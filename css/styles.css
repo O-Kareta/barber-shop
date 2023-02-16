@@ -1,28 +1,28 @@
 @font-face {
   font-display: swap;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: 400;
-  src: local('Open Sans'),
-    url('../fonts/open-sans-v34-latin-regular.woff2') format('woff2'),
-    url('../fonts/open-sans-v34-latin-regular.woff') format('woff');
+  src: local("Open Sans"),
+    url("../fonts/open-sans-v34-latin-regular.woff2") format("woff2"),
+    url("../fonts/open-sans-v34-latin-regular.woff") format("woff");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: 600;
-  src: local('Open Sans'),
-    url('../fonts/open-sans-v34-latin-600.woff2') format('woff2'),
-    url('../fonts/open-sans-v34-latin-600.woff') format('woff');
+  src: local("Open Sans"),
+    url("../fonts/open-sans-v34-latin-600.woff2") format("woff2"),
+    url("../fonts/open-sans-v34-latin-600.woff") format("woff");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 700;
-  src: local('Raleway'),
-    url('../fonts/raleway-v28-latin-700.woff2') format('woff2'),
-    url('../fonts/raleway-v28-latin-700.woff') format('woff');
+  src: local("Raleway"),
+    url("../fonts/raleway-v28-latin-700.woff2") format("woff2"),
+    url("../fonts/raleway-v28-latin-700.woff") format("woff");
 }
 
 :root {
@@ -32,7 +32,7 @@
   --color-secondary: #9da4bd;
   --color-secondary-transparent: rgba(157, 164, 189, 0.6);
   --color-brand: #ff6c00;
-  --color-background-primary: #fff;
+  --color-background-primary: #ffffff;
   --color-background-secondary: #f7f7f7;
 }
 
@@ -43,7 +43,7 @@ html {
 
 body {
   color: var(--color-primary);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.85;
@@ -80,9 +80,6 @@ ul {
 }
 
 /* Header */
-.header {
-  background-color: #555; /* remove */
-}
 
 .header-container {
   display: flex;
@@ -135,7 +132,12 @@ ul {
 .hero-section {
   padding-top: 192px;
   padding-bottom: 206px;
-  background-color: black; /* remove */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/man-haircut3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .socials-link {
@@ -149,7 +151,7 @@ ul {
 
 .hero-title {
   margin-bottom: 20px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: var(--color-primary-inverted);
   font-size: 72px;
   line-height: 1.16;
@@ -197,7 +199,7 @@ ul {
 }
 
 .section-title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: var(--color-primary-dark);
   font-size: 42px;
   line-height: 1.16;
@@ -312,4 +314,44 @@ ul {
   font-weight: 700;
   font-size: 42px;
   line-height: 1.35;
+}
+
+/* masters section */
+
+.master-section {
+  background-color: var(--color-background-secondary);
+}
+
+/* socials */
+
+.socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-item {
+  width: 44px;
+  height: 44px;
+}
+
+.socials-link {
+  background-color: var(--color-primary-inverted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  fill: var(--color-primary-dark);
+}
+
+.socials-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.socials-link:focus,
+.socials-link:hover{
+  fill: var(--color-brand)
 }
