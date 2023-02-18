@@ -34,6 +34,7 @@
   --color-brand: #ff6c00;
   --color-background-primary: #ffffff;
   --color-background-secondary: #f7f7f7;
+  --color-background-primary-dark: #191C26;
 }
 
 /* Base */
@@ -79,7 +80,26 @@ ul {
   padding: 0 15px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Header */
+
+.header {
+  padding-top: 40px;
+  background-color: #555;
+}
 
 .header-container {
   display: flex;
@@ -111,7 +131,7 @@ ul {
   color: var(--color-brand);
 }
 
-.button-light {
+.button {
   padding: 12px 20px;
   color: var(--color-primary-inverted);
   font-size: 12px;
@@ -124,7 +144,15 @@ ul {
   cursor: pointer;
 }
 
-.button-light:hover {
+.button-dark {
+  color: var(--color-primary-dark);
+}
+
+.button-dark:hover {
+  color: var(--color-primary-inverted);
+}
+
+.button:hover {
   background-color: var(--color-brand);
 }
 
@@ -138,6 +166,11 @@ ul {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.socials-hero {
+  display: flex;
+  gap: 40px;
 }
 
 .socials-link {
@@ -165,6 +198,14 @@ ul {
   letter-spacing: 0.02em;
 }
 
+/* carousel */
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
 .carousel-button {
   color: var(--color-primary-inverted);
   font-size: 12px;
@@ -175,10 +216,27 @@ ul {
   cursor: pointer;
 }
 
+.carousel-button::after {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+  content: " ";
+  margin-top: 8px;
+}
+
 .carousel-button[disabled] {
   color: var(--color-secondary-transparent);
   cursor: not-allowed;
 }
+
+/* .carousel-prev::before {
+
+}
+
+.carousel-next::before {
+
+} */
 
 /* Section */
 .section {
@@ -186,12 +244,23 @@ ul {
 }
 
 .section-tagline {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   margin-bottom: 20px;
   color: var(--color-primary-dark);
   font-size: 11px;
   line-height: 1.36;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.section-tagline::before {
+  display: block;
+  height: 1px;
+  width: 60px;
+  background-color: currentColor;
+  content: " ";
 }
 
 .section-tagline-light {
@@ -224,7 +293,14 @@ ul {
 
 /* Prices section */
 .services-section {
-  background-color: black;
+  background-image: linear-gradient(
+      rgba(17, 19, 25, 0.8),
+      rgba(17, 19, 25, 0.8)
+    ),
+    url(../images/haircut-tools.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .services-list {
@@ -269,6 +345,17 @@ ul {
   text-align: center;
 }
 
+.master-name {
+  margin-top: 30px;
+  margin-bottom: 8px;
+}
+
+.master-job {
+line-height: 1.35;
+letter-spacing: 0.02em;
+color: var(--color-brand);
+margin-bottom: 30px;
+}
 /* Achivements section */
 .achivements-section {
   padding-right: 75px;
@@ -309,11 +396,23 @@ ul {
 }
 
 .point-number {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 6px;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.35;
+  gap: 2px;
+}
+
+.point-number::after {
+  content: "+";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1, 375;
+  text-align: center;
+  color: var(--color-brand);
+  margin-top: 8px;
 }
 
 /* masters section */
@@ -335,7 +434,7 @@ ul {
   height: 44px;
 }
 
-.socials-link {
+.master-socials-link {
   background-color: var(--color-primary-inverted);
   display: flex;
   align-items: center;
@@ -351,7 +450,97 @@ ul {
   height: 20px;
 }
 
-.socials-link:focus,
-.socials-link:hover{
-  fill: var(--color-brand)
+.master-socials-link:focus,
+.master-socials-link:hover {
+  fill: var(--color-brand);
+}
+
+/* portfolio section */
+
+.pf-list {
+  display: flex;
+  gap: 30px;
+}
+
+.pf-tagline {
+  margin-bottom: 44px;
+}
+
+/* contact section*/
+
+.contact-container {
+  display: flex;
+}
+
+.contact-info {
+width: 50%;
+}
+
+.contact-form {
+  width: 50%;
+}
+
+.contact-link {
+ display: flex;
+  gap: 16px;
+  align-items: center;
+  color: var(--color-secondary-transparent);
+  text-decoration: none;
+  fill: transparent;
+  stroke: currentColor;
+ 
+}
+
+.contact-link:hover, 
+.contact-link.contact-link:focus {
+  text-decoration: underline;
+}
+
+.contact-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.contact-section {
+  background-color: var(--color-background-primary-dark);
+}
+
+address {
+  font-style: normal;
+}
+
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socials-footer {
+  align-items: center;
+  gap: 20px;
+  color: var(--color-primary-dark);
+  font-size: 11px;
+  line-height: 1.36;
+  font-weight: 600;
+}
+
+.socials-footer::before {
+  display: block;
+  height: 1px;
+  width: 60px;
+  background-color: currentColor;
+  content: " ";
+}
+
+.copyright {
+  font-weight: 600;
+font-size: 11px;
+line-height: 1.36;
+letter-spacing: 0.2em;
+color: #9DA4BD;
 }
