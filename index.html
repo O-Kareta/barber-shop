@@ -31,8 +31,10 @@
                   >Послуги і ціни</a
                 >
               </li>
-              <li><a class="header-link" href="#">Майстри</a></li>
-              <li><a class="header-link" href="#">Контакти</a></li>
+              <li><a class="header-link" href="#master-section">Майстри</a></li>
+              <li>
+                <a class="header-link" href="#contact-section">Контакти</a>
+              </li>
             </ul>
           </nav>
           <a class="header-link" href="tel:+380441111111">+38 044 111 11 11</a>
@@ -43,34 +45,36 @@
     <main>
       <section class="hero-section">
         <div class="container">
-          <ul class="socials-hero">
-            <li><a class="socials-link" href="#">Instagram</a></li>
-            <li><a class="socials-link" href="#">Youtube</a></li>
-          </ul>
-          <p class="section-tagline section-tagline-light">
-            Чоловіча перукарня у Києві
-          </p>
-          <h1 class="hero-title">BarberShop</h1>
-          <p class="hero-text">
-            Ми експерти у модних чоловічих стрижках. Працюємо швидко, обережно
-            та зі смаком.
-          </p>
-          <ul class="carousel-controls">
-            <li>
-              <button
-                class="carousel-button carousel-prev"
-                type="button"
-                disabled
-              >
-                Назад
-              </button>
-            </li>
-            <li>
-              <button class="carousel-button carousel-next" type="button">
-                Вперед
-              </button>
-            </li>
-          </ul>
+          <div class="hero-container">
+            <ul class="socials-hero">
+              <li><a class="socials-link" href="#">Instagram</a></li>
+              <li><a class="socials-link" href="#">Youtube</a></li>
+            </ul>
+            <p class="section-tagline section-tagline-light">
+              Чоловіча перукарня у Києві
+            </p>
+            <h1 class="hero-title">BarberShop</h1>
+            <p class="hero-text">
+              Ми експерти у модних чоловічих стрижках. Працюємо швидко, обережно
+              та зі смаком.
+            </p>
+            <ul class="carousel-controls">
+              <li>
+                <button
+                  class="carousel-button carousel-prev"
+                  type="button"
+                  disabled
+                >
+                  Назад
+                </button>
+              </li>
+              <li>
+                <button class="carousel-button carousel-next" type="button">
+                  Вперед
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="section" id="about-section">
@@ -222,7 +226,7 @@
           </div>
         </div>
       </section>
-      <section class="section master-section">
+      <section class="section master-section" id="master-section">
         <div class="container">
           <p class="section-tagline">Для справжніх поціновувачів атмосфери</p>
           <h2 class="section-title">Наші майстри</h2>
@@ -230,112 +234,118 @@
             <li class="masters-item">
               <div class="master">
                 <img src="./images/john.jpg" alt="John Smith" />
-                <h3 class="master-name">John Smith</h3>
-                <p class="master-job">Extreme Barber</p>
-                <ul class="socials-list">
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+                <div class="master-info">
+                  <h3 class="master-name">John Smith</h3>
+                  <p class="master-job">Extreme Barber</p>
+                  <ul class="socials-list">
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li class="masters-item">
               <div class="master">
                 <img src="./images/michele-doe.jpg" alt="John Smith" />
-                <h3 class="master-name">Michele Doe</h3>
-                <p class="master-job">Extreme Barber</p>
-                <ul class="socials-list">
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+                <div class="master-info">
+                  <h3 class="master-name">Michele Doe</h3>
+                  <p class="master-job">Extreme Barber</p>
+                  <ul class="socials-list">
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li class="masters-item">
               <div class="master">
                 <img src="./images/alan-black.jpg" alt="John Smith" />
-                <h3 class="master-name">Alan Black</h3>
-                <p class="master-job">Extreme Barber</p>
-                <ul class="socials-list">
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="socials-item">
-                    <a class="master-socials-link" href="#">
-                      <svg class="socials-icon">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+                <div class="master-info">
+                  <h3 class="master-name">Alan Black</h3>
+                  <p class="master-job">Extreme Barber</p>
+                  <ul class="socials-list">
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials-item">
+                      <a class="master-socials-link" href="#">
+                        <svg class="socials-icon">
+                          <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
           </ul>
@@ -357,7 +367,7 @@
           </ul>
         </div>
       </section>
-      <section class="section contact-section">
+      <section class="section contact-section" id="contact-section">
         <div class="container">
           <div class="contact-container">
             <div class="contact-form">
@@ -376,14 +386,16 @@
                       ул. Васильківська, 7А Київ, 08132</a
                     >
                   </li>
-                  <li><a class="contact-link" href="tel:+38 044 111 11 11">
-                    <svg class="contact-icon">
+                  <li>
+                    <a class="contact-link" href="tel:+38 044 111 11 11">
+                      <svg class="contact-icon">
                         <use href="./images/icons.svg#icon-phone"></use>
                       </svg>
-                    +38 044 111 11 11</a></li>
+                      +38 044 111 11 11</a
+                    >
+                  </li>
                   <li>
-                    <a class="contact-link" href="mail-to:barbershop@email.com"
-                      >
+                    <a class="contact-link" href="mail-to:barbershop@email.com">
                       <svg class="contact-icon">
                         <use href="./images/icons.svg#icon-mail"></use>
                       </svg>
@@ -393,19 +405,19 @@
                 </ul>
               </adress>
             </div>
-          </div >
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="container">
-<div class="footer-container">
+        <div class="footer-container">
           <p class="copyright">&copy; Copyright 2023</p>
-          <ul class="socials-hero socials-footer">
+          <ul class="socials-hero-footer socials-footer">
             <li><a class="socials-link" href="#">Instagram</a></li>
             <li><a class="socials-link" href="#">Youtube</a></li>
           </ul>
-</div >
+        </div>
       </div>
     </footer>
   </body>

@@ -34,7 +34,7 @@
   --color-brand: #ff6c00;
   --color-background-primary: #ffffff;
   --color-background-secondary: #f7f7f7;
-  --color-background-primary-dark: #191C26;
+  --color-background-primary-dark: #191c26;
 }
 
 /* Base */
@@ -97,8 +97,11 @@ ul {
 /* Header */
 
 .header {
+  position: absolute;
   padding-top: 40px;
-  background-color: #555;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 .header-container {
@@ -158,24 +161,57 @@ ul {
 
 /* Hero section */
 .hero-section {
-  padding-top: 192px;
-  padding-bottom: 206px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/man-haircut3.jpg");
+    background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
   background-attachment: fixed;
+}
+
+.hero-container {
+  position: relative;
+  padding-top: 192px;
+  padding-bottom: 206px;
+  padding-left: 200px;
+}
+
+.hero-container::before {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: calc(100% + 100px);
+  background-color: var(--color-background-primary);
+  content: "";
 }
 
 .socials-hero {
   display: flex;
+  align-items: center;
   gap: 40px;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+}
+
+.socials-hero::before {
+  display: block;
+  height: 1px;
+  width: 60px;
+  background-color: currentColor;
+  content: " ";
 }
 
 .socials-link {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   text-decoration: none;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
 }
 
 .socials-link:hover {
@@ -201,12 +237,17 @@ ul {
 /* carousel */
 
 .carousel-controls {
+  position: absolute;
+  right: 55px;
+  bottom: 40px;
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 60px;
 }
 
 .carousel-button {
+  position: relative;
+  padding: 8px 0;
   color: var(--color-primary-inverted);
   font-size: 12px;
   line-height: 1.33;
@@ -217,12 +258,12 @@ ul {
 }
 
 .carousel-button::after {
-  display: block;
+  position: absolute;
+  bottom: 0;
   width: 60px;
   height: 1px;
   background-color: currentColor;
   content: " ";
-  margin-top: 8px;
 }
 
 .carousel-button[disabled] {
@@ -230,13 +271,12 @@ ul {
   cursor: not-allowed;
 }
 
-/* .carousel-prev::before {
-
+.carousel-prev::after {
+  left: 0;
 }
-
-.carousel-next::before {
-
-} */
+.carousel-next::after {
+  right: 0;
+}
 
 /* Section */
 .section {
@@ -346,15 +386,18 @@ ul {
 }
 
 .master-name {
-  margin-top: 30px;
   margin-bottom: 8px;
 }
 
+.master-info {
+  padding: 30px 20px 0;
+}
+
 .master-job {
-line-height: 1.35;
-letter-spacing: 0.02em;
-color: var(--color-brand);
-margin-bottom: 30px;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: var(--color-brand);
+  margin-bottom: 30px;
 }
 /* Achivements section */
 .achivements-section {
@@ -473,7 +516,7 @@ margin-bottom: 30px;
 }
 
 .contact-info {
-width: 50%;
+  width: 50%;
 }
 
 .contact-form {
@@ -481,17 +524,16 @@ width: 50%;
 }
 
 .contact-link {
- display: flex;
+  display: flex;
   gap: 16px;
   align-items: center;
   color: var(--color-secondary-transparent);
   text-decoration: none;
   fill: transparent;
   stroke: currentColor;
- 
 }
 
-.contact-link:hover, 
+.contact-link:hover,
 .contact-link.contact-link:focus {
   text-decoration: underline;
 }
@@ -521,6 +563,7 @@ address {
 }
 
 .socials-footer {
+  display: flex;
   align-items: center;
   gap: 20px;
   color: var(--color-primary-dark);
@@ -539,8 +582,8 @@ address {
 
 .copyright {
   font-weight: 600;
-font-size: 11px;
-line-height: 1.36;
-letter-spacing: 0.2em;
-color: #9DA4BD;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9da4bd;
 }
